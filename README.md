@@ -9,7 +9,7 @@
     Windows, Linux or MacOS
 
 ## Contributing
-    Checkout to another branch(branch name == ticket number)
+    Checkout to another branch(branch name)
     Work on changes
     Add tests
     Create PR.
