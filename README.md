@@ -4,7 +4,7 @@
 - Follow instructions on [Truffle NFT Box](https://trufflesuite.com/boxes/nft-box/) on how to setup RTE.
     
 ## Requirements
-- Node.js 10.x or later
+- Node.js v16.16.0 (Use this version to avoid compactibility issues)
 - NPM version 5.2 or later
 - Windows, Linux or MacOS
 
