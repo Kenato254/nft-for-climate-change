@@ -3,7 +3,7 @@ import Web3 from 'web3';
 import "./App.css";
 import { useEffect, useState } from 'react';
 import './App.css';
-import contract from './contracts/NFTCollection.json';
+import contract from './contracts/ClimateToken.json';
 
 function App() {
 
@@ -105,9 +105,9 @@ function App() {
   return (
     <div className='App'>
       <div className='main-app'>
-          {currentAccount ? mintNftButton() : connectWalletButton()}
-        </div>
+        {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-var NFTCollection = artifacts.require("./NFTCollection.sol");
+var ClimateToken = artifacts.require("./ClimateNFT.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(NFTCollection,"URI HERE","TOKEN NAME","SYMBOL");
+  deployer.deploy(ClimateToken,"URI HERE","TOKEN NAME","SYMBOL");
 };
