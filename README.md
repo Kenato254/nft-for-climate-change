@@ -1,15 +1,15 @@
 # NFT rewards for planting trees to reduce the effect of climate change.
 
 ## Setting up:
-    Follow instructions on [Truffle NFT Box](https://trufflesuite.com/boxes/nft-box/0) on how to setup RTE.
+- Follow instructions on [Truffle NFT Box](https://trufflesuite.com/boxes/nft-box/) on how to setup RTE.
     
 ## Requirements
-    Node.js 10.x or later
-    NPM version 5.2 or later
-    Windows, Linux or MacOS
+- Node.js v16.16.0 (Use this version to avoid compactibility issues)
+- NPM version 5.2 or later
+- Windows, Linux or MacOS
 
 ## Contributing
-    Checkout to another branch(branch name)
-    Work on changes
-    Add tests
-    Create PR.
+- Checkout to another branch(branch name)
+- Work on changes
+- Add tests
+- Create PR.
