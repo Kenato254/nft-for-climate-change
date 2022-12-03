@@ -1,3 +1,8 @@
+# Group C:
+- Members: Kennedy & Adedapo
+- [Slides](https://docs.google.com/presentation/d/1NH4rezFO93f8c-FGLoYft9Iing0FoiQmGOrU2UGS1UU/edit#slide=id.g1a2f078a7b6_0_0)
+- Project Status: Finalizing.
+
 # NFT rewards for planting trees to reduce the effect of climate change.
 
 ## Setting up:

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract ClimateToken is ERC721, Ownable {
+contract ClimateNFT is ERC721, Ownable {
     using SafeMath for uint256;
     using Counters for Counters.Counter;
 
@@ -42,7 +42,8 @@ contract ClimateToken is ERC721, Ownable {
     }
 
     // Mint new token and update the list
-    function mintCToken(string memory _tokenName) public payable {
+    function mintCToken() public payable {
+        string memory _tokenName = "my-token";
         uint256 _tokenId = _tokenIds.current();
         _safeMint(msg.sender, _tokenId);
         _tokenIds.increment();
