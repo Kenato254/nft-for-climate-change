@@ -1,9 +1,9 @@
-var ClimateToken = artifacts.require("./ClimateNFT.sol");
+const ClimateToken = artifacts.require("./ClimateNFT.sol");
 
-var IMAGE_URI = "/home/kennedy/Pictures/Personal-Images/IMG_2533.jpg";
-var TOKEN_NAME = "AfterChurchToken";
-var SYMBOL = "ACT";
+var BASE_URI = "ipfs://";
+var TOKEN_NAME = "ClimateChangeToken";
+var SYMBOL = "CCT";
 
 module.exports = function(deployer) {
-  deployer.deploy(ClimateToken, IMAGE_URI, TOKEN_NAME, SYMBOL);
+  deployer.deploy(ClimateToken, BASE_URI, TOKEN_NAME, SYMBOL);
 };

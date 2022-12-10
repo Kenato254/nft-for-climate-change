@@ -1,0 +1,7 @@
+// server/package.json
+{
+  "scripts": {
+    "start": "node server/index.js"
+  },
+}
+

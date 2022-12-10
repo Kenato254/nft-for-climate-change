@@ -1,13 +1,15 @@
-import React, { Component } from "react";
 import Web3 from 'web3';
-import "./App.css";
 import { useEffect, useState } from 'react';
-import './App.css';
-import contract from './contracts/ClimateNFT.json';
+import contract from '../contracts/ClimateNFT.json';
 
-function App() {
 
+function Mint() {
   const [currentAccount, setCurrentAccount] = useState(null);
+  const ipfsData = JSON.parse(localStorage.getItem("ipfsData")) || [];
+
+  const nft_name = ipfsData.length < 1  ? "" : ipfsData.name.slice(0, ipfsData.name.search(/\./g)).replace(/_/g, " ");
+  const nft_ipfs_hash = ipfsData.length < 1 ? "" : ipfsData.ipfs_hash;
+
   const checkWalletIsConnected = async () => {
     const { ethereum } = window;
 
@@ -66,8 +68,12 @@ function App() {
         console.log(nftContract);
         console.log("Initialize payment");
 
-        let nftTxn = await nftContract.methods.mintCToken().send({ from: accounts[0], value: web3.utils.toWei("0.0001", "ether") }).on('receipt', function () {
+        let nftTxn = await nftContract.methods.mintCToken(nft_name, nft_ipfs_hash).send({ from: accounts[0], value: web3.utils.toWei("0.0001", "ether") }).on('receipt', function () {
           console.log('receipt')
+          localStorage.clear();
+          console.log("Cleared!")
+          window.location.reload();
+          console.log("Cleared!")
         });
 
         console.log("Mining...please wait");
@@ -84,31 +90,41 @@ function App() {
 
   const connectWalletButton = () => {
     return (
-      <button onClick={connectWalletHandler} className='cta-button connect-wallet-button'>
-        Connect Wallet
-      </button>
+      <button onClick={connectWalletHandler} className="my-5 w-full flex justify-center bg-green-500 text-gray-100 p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline hover:bg-green-600 shadow-lg cursor-pointer transition ease-in duration-300">
+      Connect Wallet</button>
     )
   }
 
   const mintNftButton = () => {
     return (
-      <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
-        Mint NFT
-      </button>
-    )
+      <button onClick={mintNftHandler} className="my-5 w-full flex justify-center bg-green-500 text-gray-100 p-4  rounded-full tracking-wide font-semibold  focus:outline-none focus:shadow-outline hover:bg-green-600 shadow-lg cursor-pointer transition ease-in duration-300">
+      Mint NFT</button>
+      )
   }
-
+  
   useEffect(() => {
-    checkWalletIsConnected();
-  }, [])
+    checkWalletIsConnected()
+  }, []);
 
   return (
     <div className='App'>
       <div className='main-app'>
-        {currentAccount ? mintNftButton() : connectWalletButton()}
+        <div className="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+          style={{ backgroundImage: "url(https://www.coindesk.com/resizer/uAcQrY4TkwR3dGCtcXo4zAyQfIA=/arc-photo-coindesk/arc2-prod/public/TA6CWB3BBNA5LFZZZBNRKMFQ5A.jpg)"}}>
+          <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
+          <div className="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
+            <div className="text-center">
+              <h2 className="mt-5 text-3xl font-bold text-gray-900">
+                Mint Now!
+              </h2>
+              <p className="mt-2 text-sm text-gray-400"></p>
+            </div>
+              {currentAccount ? mintNftButton() : connectWalletButton()}
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default App;
+export default Mint;

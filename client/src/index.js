@@ -1,12 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
+import Mint from "./pages/Mint";
+import AllMinted from "./pages/Allminted";
+import App from './pages/App';
+import NoPage from "./pages/NoPage";
+import Layout from "./pages/Layout";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default function ClimateApp() {
+  return (
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<AllMinted />} />
+          <Route path="upload" element={<App />} />
+          <Route path="mint" element={<Mint />} />
+          <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <ClimateApp />
+  </React.StrictMode>
+);
+
+// reportWebVitals();
+

@@ -8,13 +8,20 @@
 ## Setting up:
 - Follow instructions on [Truffle NFT Box](https://trufflesuite.com/boxes/nft-box/) on how to setup RTE.
     
-## Requirements
-- Node.js v16.16.0 (Use this version to avoid compactibility issues)
-- NPM version 5.2 or later
-- Windows, Linux or MacOS
+## Stack
+- React JS
+- Express JS
+- Solidity (Truffle and Ganache RTE)
+- IPFS (Node on Brave)
 
-## Contributing
-- Checkout to another branch(branch name)
-- Work on changes
-- Add tests
-- Create PR.
+---
+**NOTE**
+
+This project is for demo purposes and was fast tracked to meet the deadline.
+
+---
+
+## Screenshots
+![login-image](Screenshot/Upload_To_Ipfs.png)
+![login-image](Screenshot/Start_Mint.png)
+![login-image](Screenshot/Connect_Wallet.png)
