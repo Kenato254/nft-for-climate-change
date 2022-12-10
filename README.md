@@ -13,6 +13,7 @@
 - Express JS
 - Solidity (Truffle and Ganache RTE)
 - IPFS (Node on Brave)
+- Blockfrost JS
 
 ---
 **NOTE**
@@ -25,7 +26,7 @@ This project is for demo purposes and was fast tracked to meet the deadline.
 ### Deploying to LocalDeployment
 ![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/LocalDeployment.png)
 
-## User Interraction
+## Upload to IPFS
 ![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/Upload_To_Ipfs.png)
 
 ## Minting
