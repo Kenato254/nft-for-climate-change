@@ -23,5 +23,5 @@ This project is for demo purposes and was fast tracked to meet the deadline.
 
 ## Screenshots
 ![login-image](Screenshot/Upload_To_Ipfs.png)
-![login-image](Screenshot/Start_Mint.png)
+![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/Start_Mint.png)
 ![login-image](Screenshot/Connect_Wallet.png)
