@@ -22,6 +22,11 @@ This project is for demo purposes and was fast tracked to meet the deadline.
 ---
 
 ## Screenshots
-![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/Connect%20_Wallet.png)
+### Deploying to LocalDeployment
+![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/LocalDeployment.png)
+
+## User Interraction
+![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/Upload_To_Ipfs.png)
+
+## Minting
 ![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshots/Start_Mint.png)
-![login-image](https://github.com/Kenato254/nft-for-climate-change/blob/setup/Screenshot/Connect_Wallet.png)
